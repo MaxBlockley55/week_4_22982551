@@ -12,5 +12,10 @@ head(flights)
 library(tidyverse)
 
 flights_selected <- flights %>%
-  select(dep_delay, arr_delay, carrier)
+  select(carrier, dep_delay, arr_delay)
+
+flights_clean <- flights %>%
+  select(carrier, dep_delay, arr_delay) %>%
+  left_join(airlines, by = "carrier")
+  
 
