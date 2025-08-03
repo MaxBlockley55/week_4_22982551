@@ -16,3 +16,4 @@ flights_clean_dt <- flights_dt[, . (carrier, dep_delay, arr_delay)][
   airlines_dt, on = "carrier"
 ][, .(name, dep_delay, arr_delay)]
 
+
