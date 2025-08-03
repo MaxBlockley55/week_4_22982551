@@ -16,6 +16,8 @@ flights_selected <- flights %>%
 
 flights_clean <- flights %>%
   select(carrier, dep_delay, arr_delay) %>%
-  left_join(airlines, by = "carrier")
+  left_join(airlines, by = "carrier") %>%
+  select(-carrier)
   
+
 
