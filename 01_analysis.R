@@ -12,4 +12,5 @@ flights_means <- flights_clean %>%
   arrange(avg_dep_delay)
 
 
-flights_means
+
+
